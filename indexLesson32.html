@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .textInputer {
+            margin: 0 0 1.8rem 0;
+        }
+
+        .message {
+            transform: translateY(-100px);
+            background: #0f0;
+            border: 1px solid rgb(9, 79, 9);
+            padding: 5px;
+            width: 150px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .deleteConfirm {
+            opacity: 0;
+            transform: translateY(35%);
+            background: #f00;
+            border: 1px solid rgb(79, 9, 9);
+            padding: 5px;
+            width: 160px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            position: fixed;
+            text-align: center;
+            top: 50%;
+            right: 50%;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .showDelete {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .cancelButton {
+        margin-left: 30%;
+        }
+
+        .paginationContainer {
+            margin: 1.2rem 0 0 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+ 
+    
+
+
+    <div>
+        <h1>Todo list
+
+            <span id="todoCount"></span>
+        </h1>
+    <div class="textInputer">
+        <label for="todoInput">Add a new item</label>
+            <input 
+                id="todoItem"
+                type="text" 
+                placeholder="Add new todo" 
+                class="todoInput"/>
+    </div>
+        
+
+        <button id="addItemButton">Add item</button>
+        <button class="removeItemButton">Remove item</button>
+        <button class="makeItDoneItemButton"> Make Item Done</button>
+    </div>
+    
+    <ul id="todoItems">
+
+    </ul>
+    <div class="message">
+        Item is added to the list
+    </div>
+
+    <div class="deleteConfirm"> 
+        <p>The item will be deleted in 
+            <span id="timer"></span>
+            seconds
+        </p>
+        <button class="cancelButton">Cancel</button>
+    </div>
+
+    <div alt="lesson 32">
+        <label for="todoInput">Fetch a new item by ID:</label>
+        <input
+            id="todoInputId"
+            type="text"
+            placeholder="Add todo by ID"
+            class="todoInputId" 
+        />
+        <button class="fetchTodo">Fetch One Todo</button>
+        <button class="fetchTodos">Fetch All Todos</button>
+        <button class="fetch10Todos">Fetch 10 Todo`s</button>
+
+        <ul id="todoItemsForFetch"></ul>
+
+        <div class="paginationContainer">
+            <button class="paginationButton">1</button>
+            <button class="paginationButton">2</button>
+            <button class="paginationButton">3</button>
+            <button class="paginationButton">4</button>
+            <button class="paginationButton">5</button>
+            <button class="paginationButton">6</button>
+            <button class="paginationButton">7</button>
+            <button class="paginationButton">8</button>
+            <button class="paginationButton">9</button>
+            <button class="paginationButton">10</button>
+        </div>
+        
+    </div>
+    <!-- <div>
+        <h1>Todo list 2</h1>
+        <button onclick="addItem2()">Todo list 2</button>
+        <button onclick="removeItem2()">Remove item</button>
+    </div> -->
+    <script src="./practiceLesson32.js"></script>
+    <script src="./scriptForFetchingDataFromGithub.js"></script>
+</body>
+</html>
